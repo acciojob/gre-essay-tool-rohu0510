@@ -8,6 +8,11 @@ textbox.addEventListener("input", function() {
   // Get the text in the textbox
   const text = textbox.value;
 
+	if (text === "") {
+    wordCount.innerHTML = 0;
+    return;
+  }
+
   // Count the number of words in the text
   const wordCountValue = text.trim().split(/\s+/).length;
 
